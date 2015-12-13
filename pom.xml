@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd ">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.brucewayne.cas</groupId>
+    <artifactId>brucewayne-cas</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <name>brucewayne CAS</name>
+    <description>brucewayne JA-SIG CAS.</description>
+
+    <properties>
+        <cas.version>4.1.0</cas.version>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+        <spring.security.ldap.version>4.0.2.RELEASE</spring.security.ldap.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <commons.dbcp.version>2.1.1</commons.dbcp.version>
+        <hibernate.version>3.5.4-Final</hibernate.version>
+        <hibernate.entitymgmr.version>4.3.11.Final</hibernate.entitymgmr.version>
+        <mysql.connector.version>5.1.36</mysql.connector.version>
+        <jstl.version>1.2</jstl.version>
+        <slf4j.version>1.7.10</slf4j.version>
+    </properties>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.3</version>
+					<configuration>
+						<source>${maven.compiler.source}</source>
+						<target>${maven.compiler.target}</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+	<modules>
+		<module>cas-server</module>
+		<module>cas-management</module>
+	</modules>
+</project>
